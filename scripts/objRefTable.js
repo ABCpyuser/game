@@ -1,0 +1,72 @@
+const C3 = self.C3;
+self.C3_GetObjectRefTable = function () {
+	return [
+		C3.Plugins.Sprite,
+		C3.Behaviors.Physics,
+		C3.Behaviors.solid,
+		C3.Plugins.Keyboard,
+		C3.Behaviors.scrollto,
+		C3.Plugins.TiledBg,
+		C3.Plugins.Audio,
+		C3.Plugins.System.Cnds.OnLayoutStart,
+		C3.Plugins.Sprite.Acts.SetAnimFrame,
+		C3.Plugins.System.Exps.choose,
+		C3.Plugins.Keyboard.Cnds.OnKey,
+		C3.Behaviors.Physics.Cnds.IsEnabled,
+		C3.Plugins.Sprite.Acts.RotateClockwise,
+		C3.Plugins.Sprite.Acts.RotateCounterclockwise,
+		C3.Plugins.Keyboard.Cnds.IsKeyDown,
+		C3.Plugins.Sprite.Acts.MoveAtAngle,
+		C3.Behaviors.Physics.Acts.SetDensity,
+		C3.Behaviors.Physics.Acts.SetEnabled,
+		C3.Plugins.System.Exps.random,
+		C3.Plugins.Sprite.Exps.AnimationFrameCount,
+		C3.Plugins.System.Cnds.EveryTick,
+		C3.Behaviors.Physics.Cnds.IsSleeping,
+		C3.Plugins.System.Cnds.PickByHighestLowestValue,
+		C3.Plugins.Sprite.Exps.Y,
+		C3.Plugins.Sprite.Acts.SetPos,
+		C3.Plugins.Sprite.Exps.X,
+		C3.Plugins.System.Exps.min,
+		C3.Plugins.System.Cnds.Else,
+		C3.Plugins.System.Cnds.TriggerOnce,
+		C3.Plugins.System.Acts.CreateObject,
+		C3.Plugins.Sprite.Cnds.CompareY,
+		C3.Plugins.System.Acts.RestartLayout,
+		C3.Plugins.System.Cnds.OnLoadFinished,
+		C3.Plugins.Audio.Acts.Play
+	];
+};
+self.C3_JsPropNameTable = [
+	{Физика: 0},
+	{Спрайт: 0},
+	{Твёрдый: 0},
+	{Спрайт2: 0},
+	{Клавиатура: 0},
+	{SpawnPoint: 0},
+	{СледитьЗа: 0},
+	{CameraTarget: 0},
+	{ТайловыйФон: 0},
+	{ТайловыйФон2: 0},
+	{ТайловыйФон3: 0},
+	{ТайловыйФон4: 0},
+	{ТайловыйФон5: 0},
+	{ТайловыйФон6: 0},
+	{Аудио: 0},
+	{CanSpawn: 0}
+];
+
+self.InstanceType = {
+	Спрайт: class extends self.ISpriteInstance {},
+	Спрайт2: class extends self.ISpriteInstance {},
+	Клавиатура: class extends self.IInstance {},
+	SpawnPoint: class extends self.ISpriteInstance {},
+	CameraTarget: class extends self.ISpriteInstance {},
+	ТайловыйФон: class extends self.ITiledBackgroundInstance {},
+	ТайловыйФон2: class extends self.ITiledBackgroundInstance {},
+	ТайловыйФон3: class extends self.ITiledBackgroundInstance {},
+	ТайловыйФон4: class extends self.ITiledBackgroundInstance {},
+	ТайловыйФон5: class extends self.ITiledBackgroundInstance {},
+	ТайловыйФон6: class extends self.ITiledBackgroundInstance {},
+	Аудио: class extends self.IInstance {}
+}
