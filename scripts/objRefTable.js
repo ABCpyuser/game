@@ -31,10 +31,16 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.System.Cnds.Else,
 		C3.Plugins.System.Cnds.TriggerOnce,
 		C3.Plugins.System.Acts.CreateObject,
+		C3.Plugins.System.Acts.SetBoolVar,
+		C3.Plugins.System.Cnds.Compare,
+		C3.Plugins.System.Acts.ToggleBoolVar,
 		C3.Plugins.Sprite.Cnds.CompareY,
 		C3.Plugins.System.Acts.RestartLayout,
 		C3.Plugins.System.Cnds.OnLoadFinished,
-		C3.Plugins.Audio.Acts.Play
+		C3.Plugins.Audio.Acts.Play,
+		C3.Plugins.System.Cnds.CompareBoolVar,
+		C3.Behaviors.Physics.Acts.SetFriction,
+		C3.Plugins.Sprite.Acts.SetY
 	];
 };
 self.C3_JsPropNameTable = [
@@ -53,7 +59,11 @@ self.C3_JsPropNameTable = [
 	{ТайловыйФон5: 0},
 	{ТайловыйФон6: 0},
 	{Аудио: 0},
-	{CanSpawn: 0}
+	{Спрайт3: 0},
+	{Спрайт4: 0},
+	{CanSpawn: 0},
+	{IsIceMode_: 0},
+	{heavy: 0}
 ];
 
 self.InstanceType = {
@@ -68,5 +78,7 @@ self.InstanceType = {
 	ТайловыйФон4: class extends self.ITiledBackgroundInstance {},
 	ТайловыйФон5: class extends self.ITiledBackgroundInstance {},
 	ТайловыйФон6: class extends self.ITiledBackgroundInstance {},
-	Аудио: class extends self.IInstance {}
+	Аудио: class extends self.IInstance {},
+	Спрайт3: class extends self.ISpriteInstance {},
+	Спрайт4: class extends self.ISpriteInstance {}
 }
